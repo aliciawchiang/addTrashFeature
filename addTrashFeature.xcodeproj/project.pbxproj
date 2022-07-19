@@ -14,6 +14,8 @@
 		BDD9CDD92887596F000FF222 /* addTrashFeature.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BDD9CDD72887596F000FF222 /* addTrashFeature.xcdatamodeld */; };
 		BDD9CDDB28875970000FF222 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDD9CDDA28875970000FF222 /* Assets.xcassets */; };
 		BDD9CDDE28875970000FF222 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDD9CDDC28875970000FF222 /* LaunchScreen.storyboard */; };
+		BDD9CDE628875B39000FF222 /* addTrashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD9CDE528875B39000FF222 /* addTrashViewController.swift */; };
+		BDD9CDE828875E56000FF222 /* listTrashTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD9CDE728875E56000FF222 /* listTrashTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		BDD9CDDA28875970000FF222 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BDD9CDDD28875970000FF222 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BDD9CDDF28875970000FF222 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BDD9CDE528875B39000FF222 /* addTrashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addTrashViewController.swift; sourceTree = "<group>"; };
+		BDD9CDE728875E56000FF222 /* listTrashTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = listTrashTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +46,7 @@
 		BDD9CDC22887596F000FF222 = {
 			isa = PBXGroup;
 			children = (
+				BDD9CDE728875E56000FF222 /* listTrashTableViewController.swift */,
 				BDD9CDCD2887596F000FF222 /* addTrashFeature */,
 				BDD9CDCC2887596F000FF222 /* Products */,
 			);
@@ -61,6 +66,7 @@
 				BDD9CDCE2887596F000FF222 /* AppDelegate.swift */,
 				BDD9CDD02887596F000FF222 /* SceneDelegate.swift */,
 				BDD9CDD22887596F000FF222 /* ViewController.swift */,
+				BDD9CDE528875B39000FF222 /* addTrashViewController.swift */,
 				BDD9CDD42887596F000FF222 /* Main.storyboard */,
 				BDD9CDDA28875970000FF222 /* Assets.xcassets */,
 				BDD9CDDC28875970000FF222 /* LaunchScreen.storyboard */,
@@ -141,6 +147,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDD9CDE828875E56000FF222 /* listTrashTableViewController.swift in Sources */,
+				BDD9CDE628875B39000FF222 /* addTrashViewController.swift in Sources */,
 				BDD9CDD32887596F000FF222 /* ViewController.swift in Sources */,
 				BDD9CDCF2887596F000FF222 /* AppDelegate.swift in Sources */,
 				BDD9CDD12887596F000FF222 /* SceneDelegate.swift in Sources */,
