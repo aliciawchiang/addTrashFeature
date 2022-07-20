@@ -9,6 +9,8 @@ import UIKit
 
 class listTrashTableViewController: UITableViewController {
     
+    //outlets - image and size tag
+    
     //vars
     var trashList : [TrashListCD] = []
     
