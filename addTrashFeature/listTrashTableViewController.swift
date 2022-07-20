@@ -8,7 +8,25 @@
 import UIKit
 
 class listTrashTableViewController: UITableViewController {
+    
+    //vars
+    var trashList : [TrashListCD] = []
+    
+    //prepare function
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let addVC = segue.destination as? addTrashViewController {
+        addVC.previousVC = self
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
+      // this gives us a single ToDo
+      let trash = trashList[indexPath.row]
+
+      performSegue(withIdentifier: "moveToComplete", sender: trash)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -18,17 +36,41 @@ class listTrashTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+      getTrashList()
+    }
+    
+    func getTrashList() {
+      if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
+          if let coreDataTrash = try? context.fetch(TrashListCD.fetchRequest()) as? [TrashListCD] {
+                      trashList = coreDataTrash
+                      tableView.reloadData()
+          }
+      }
+    }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return trashList.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+
+        let trash = trashList[indexPath.row]
+        
+        let name = trash.name
+        cell.textLabel?.text = name
+        
+        return cell
     }
 
     /*
