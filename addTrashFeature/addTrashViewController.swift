@@ -17,32 +17,13 @@ class addTrashViewController: UIViewController, UIImagePickerControllerDelegate,
     //VARIABLES
     var imagePicker = UIImagePickerController()
     var previousVC = listTrashTableViewController()
+    var trashSize = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setPopUpButton()
         imagePicker.delegate = self
         // Do any additional setup after loading the view.
-    }
-    
-    //MARK: Trash Size Pop Up Function
-    func setPopUpButton(){
-        let optionClosure = {(action : UIAction) in print(action.title)}
-        trashSizePopUpButton.menu = UIMenu(children : [
-            UIAction(title: "Select Trash Size", state: .on, handler: optionClosure),
-            UIAction(title: "Small", state: .off, handler: optionClosure),
-            UIAction(title: "Medium", state: .off, handler: optionClosure),
-            UIAction(title: "Large", state: .off, handler: optionClosure)
-        ])
-        trashSizePopUpButton.showsMenuAsPrimaryAction = true
-        trashSizePopUpButton.changesSelectionAsPrimaryAction = true
-    }
-    
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        if let selectedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage{
-            imageDisplay.image = selectedImage
-            imagePicker.dismiss(animated: true, completion: nil)
-        }
     }
 
     //ACTION - done button, store name and size to core data
@@ -59,15 +40,15 @@ class addTrashViewController: UIViewController, UIImagePickerControllerDelegate,
                 // this .name and .important came from the attributes you typed in on the Core Data page!
                 trash.name = nameText
             }
-
+            
+            
+            //trash.size = setPopUpButton()
+                
             try? context.save()
 
             navigationController?.popViewController(animated: true)
           }
     }
-    
-    
-    
     
     //ACTION - photo
     
@@ -91,5 +72,31 @@ class addTrashViewController: UIViewController, UIImagePickerControllerDelegate,
         // Pass the selected object to the new view controller.
     }
     */
-
+    //MARK: Trash Size Pop Up Function
+    
+    
+    func setPopUpButton(){
+        
+        let optionClosure = {(action : UIAction) in print(action.title)}
+        trashSizePopUpButton.menu = UIMenu(children : [
+            UIAction(title: "Select Trash Size", state: .on, handler: optionClosure),
+            UIAction(title: "Small", state: .off, handler: optionClosure),
+            UIAction(title: "Medium", state: .off, handler: optionClosure),
+            UIAction(title: "Large", state: .off, handler: optionClosure)
+        ])
+        
+        trashSizePopUpButton.showsMenuAsPrimaryAction = true
+        trashSizePopUpButton.changesSelectionAsPrimaryAction = true
+        }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let selectedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage{
+            imageDisplay.image = selectedImage
+            imagePicker.dismiss(animated: true, completion: nil)
+        }
+    }
+    
 }
+    
+    
+

@@ -10,6 +10,7 @@ import UIKit
 class listTrashTableViewController: UITableViewController {
     
     //outlets - image and size tag
+    //@IBOutlet var tableView: UITableView!
     
     //vars
     var trashList : [TrashListCD] = []
@@ -18,6 +19,12 @@ class listTrashTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let addVC = segue.destination as? addTrashViewController {
         addVC.previousVC = self
+        }
+        if let completeVC = segue.destination as? viewItemViewController {
+            if let trash = sender as? TrashListCD {
+              completeVC.selectedTrash = trash
+              completeVC.previousVC = self
+            }
         }
     }
     

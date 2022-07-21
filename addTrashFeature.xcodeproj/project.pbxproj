@@ -16,6 +16,7 @@
 		BDD9CDDE28875970000FF222 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDD9CDDC28875970000FF222 /* LaunchScreen.storyboard */; };
 		BDD9CDE628875B39000FF222 /* addTrashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD9CDE528875B39000FF222 /* addTrashViewController.swift */; };
 		BDD9CDE828875E56000FF222 /* listTrashTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD9CDE728875E56000FF222 /* listTrashTableViewController.swift */; };
+		BDF5FF0A2889BF9B00EF31B1 /* viewItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF5FF092889BF9B00EF31B1 /* viewItemViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		BDD9CDDF28875970000FF222 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BDD9CDE528875B39000FF222 /* addTrashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addTrashViewController.swift; sourceTree = "<group>"; };
 		BDD9CDE728875E56000FF222 /* listTrashTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = listTrashTableViewController.swift; sourceTree = "<group>"; };
+		BDF5FF092889BF9B00EF31B1 /* viewItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = viewItemViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 				BDD9CDD22887596F000FF222 /* ViewController.swift */,
 				BDD9CDE528875B39000FF222 /* addTrashViewController.swift */,
 				BDD9CDE728875E56000FF222 /* listTrashTableViewController.swift */,
+				BDF5FF092889BF9B00EF31B1 /* viewItemViewController.swift */,
 				BDD9CDD42887596F000FF222 /* Main.storyboard */,
 				BDD9CDDA28875970000FF222 /* Assets.xcassets */,
 				BDD9CDDC28875970000FF222 /* LaunchScreen.storyboard */,
@@ -152,6 +155,7 @@
 				BDD9CDD32887596F000FF222 /* ViewController.swift in Sources */,
 				BDD9CDCF2887596F000FF222 /* AppDelegate.swift in Sources */,
 				BDD9CDD12887596F000FF222 /* SceneDelegate.swift in Sources */,
+				BDF5FF0A2889BF9B00EF31B1 /* viewItemViewController.swift in Sources */,
 				BDD9CDD92887596F000FF222 /* addTrashFeature.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
